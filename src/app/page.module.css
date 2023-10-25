@@ -9,29 +9,32 @@
 
 .description {
   display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 0.85rem;
+  gap: 1.5rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
 }
 
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+.description h1 {
+  width: 100%;
+  text-align: center;
 }
 
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+.button-wrapper {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  color: deepskyblue;
+  font-weight: 900;
+}
+
+.button-wrapper > a:hover {
+  color: deeppink;
 }
 
 .code {
@@ -97,7 +100,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -106,17 +109,6 @@
 
 .logo {
   position: relative;
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
 }
 
 @media (prefers-reduced-motion) {
